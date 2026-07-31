@@ -1,0 +1,114 @@
+/* ==========================================================================
+   Planto — Design Tokens
+   Single source of truth for colors, typography, spacing, radius, shadows.
+   ========================================================================== */
+
+:root {
+  /* ---- Brand / surface colors (dark master theme) ---- */
+  --c-bg: #0b0f0b;
+  --c-bg-deep: #060906;
+  --c-bg-alt: #0e130e;
+  --c-surface: #131a13;
+  --c-surface-2: #182018;
+  --c-surface-3: #1e271e;
+  --c-card: rgba(30, 39, 30, 0.72);
+  --c-card-hover: rgba(41, 54, 41, 0.85);
+  --c-glass: rgba(255, 255, 255, 0.04);
+
+  /* ---- Accent ---- */
+  --c-accent: #8ec63f;
+  --c-accent-2: #b6e26a;
+  --c-accent-deep: #4b7a22;
+  --c-accent-soft: rgba(142, 198, 63, 0.14);
+
+  /* ---- Text ---- */
+  --c-text: #eef3ea;
+  --c-text-2: #b9c4b3;
+  --c-text-3: #8b978a;
+  --c-heading: #f4f8f0;
+
+  /* ---- Lines / states ---- */
+  --c-border: rgba(255, 255, 255, 0.09);
+  --c-border-strong: rgba(142, 198, 63, 0.35);
+  --c-success: #6fcf6f;
+  --c-warning: #e3b341;
+  --c-danger: #e4674b;
+  --c-star: #f0b429;
+
+  /* ---- Gradients ---- */
+  --g-hero: radial-gradient(120% 90% at 50% 0%, #16241a 0%, #0b0f0b 62%, #070a07 100%);
+  --g-section: linear-gradient(180deg, #0b0f0b 0%, #0e130e 100%);
+  --g-card: linear-gradient(145deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.015));
+  --g-accent: linear-gradient(120deg, var(--c-accent), var(--c-accent-2));
+
+  /* ---- Typography ---- */
+  --f-head: "Poppins", "Segoe UI", system-ui, sans-serif;
+  --f-body: "DM Sans", "Segoe UI", system-ui, sans-serif;
+  --fs-display: clamp(2.4rem, 5.4vw, 4.2rem);
+  --fs-h1: clamp(2rem, 4vw, 3rem);
+  --fs-h2: clamp(1.6rem, 2.8vw, 2.25rem);
+  --fs-h3: 1.25rem;
+  --fs-h4: 1.05rem;
+  --fs-body: 0.95rem;
+  --fs-sm: 0.85rem;
+  --fs-xs: 0.75rem;
+  --lh-body: 1.75;
+
+  /* ---- Spacing scale (8pt) ---- */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 64px;
+  --s-9: 96px;
+  --section-y: clamp(56px, 8vw, 104px);
+  --container: 1200px;
+  --gutter: 20px;
+
+  /* ---- Radius ---- */
+  --r-xs: 8px;
+  --r-sm: 12px;
+  --r-md: 18px;
+  --r-lg: 24px;
+  --r-xl: 32px;
+  --r-pill: 999px;
+
+  /* ---- Shadows ---- */
+  --sh-sm: 0 4px 14px rgba(0, 0, 0, 0.28);
+  --sh-md: 0 14px 34px rgba(0, 0, 0, 0.38);
+  --sh-lg: 0 30px 70px rgba(0, 0, 0, 0.5);
+  --sh-glow: 0 0 0 1px rgba(142, 198, 63, 0.25), 0 18px 46px rgba(142, 198, 63, 0.12);
+
+  /* ---- Motion ---- */
+  --t-fast: 0.18s ease;
+  --t-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --t-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+  --header-h: 76px;
+}
+
+/* Optional light mode — same design language, inverted surfaces. */
+html[data-theme="light"] {
+  --c-bg: #f3f6f0;
+  --c-bg-deep: #e9eee4;
+  --c-bg-alt: #ffffff;
+  --c-surface: #ffffff;
+  --c-surface-2: #f6f8f3;
+  --c-surface-3: #eef2e9;
+  --c-card: rgba(255, 255, 255, 0.9);
+  --c-card-hover: #ffffff;
+  --c-glass: rgba(11, 15, 11, 0.03);
+  --c-text: #1b2419;
+  --c-text-2: #4c5a48;
+  --c-text-3: #6d7b69;
+  --c-heading: #101710;
+  --c-border: rgba(11, 15, 11, 0.1);
+  --g-hero: radial-gradient(120% 90% at 50% 0%, #dfeacf 0%, #f3f6f0 60%, #eef2e9 100%);
+  --g-section: linear-gradient(180deg, #f3f6f0 0%, #ffffff 100%);
+  --g-card: linear-gradient(145deg, rgba(11, 15, 11, 0.035), rgba(11, 15, 11, 0.01));
+  --sh-md: 0 14px 34px rgba(24, 40, 20, 0.1);
+  --sh-lg: 0 30px 70px rgba(24, 40, 20, 0.12);
+}
